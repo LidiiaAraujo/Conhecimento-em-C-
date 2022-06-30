@@ -1,0 +1,47 @@
+<%@ Page Language="C#" AutoEventWireup="True" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Label Example</title>
+<script language="C#" runat="server">
+
+      void Button_Click(Object Sender, EventArgs e) 
+      {
+         Label1.Text = Server.HtmlEncode(Text1.Text);
+      }
+
+   </script>
+
+</head>
+
+<body>
+
+   <form id="Form1" runat="server">
+
+      <h3>Valor de desconto</h3>
+
+      
+     <asp:lbl_nome id="Nome" 
+                 Text="Nome" 
+                 runat="server"/>
+        
+      
+    <asp:lbl_salario id="Salario_do_cliente" 
+           Text="Valor do salario"
+           runat="server" /> 
+    
+      <asp:btn_limpar id="Button" 
+           Text="Limpar Campos" 
+           OnClick="Button_Click" 
+           runat="server"/>
+     <asp:btn_calcular id="Button" 
+           Text="Calcular IR" 
+           OnClick="Button_Click" 
+           runat="server"/>
+      
+
+   </form>
+
+</body>
+</html>

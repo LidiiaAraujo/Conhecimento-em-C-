@@ -1,0 +1,61 @@
+<%@ Page Language="C#" AutoEventWireup="True" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Label Example</title>
+<script language="C#" runat="server">
+
+      void Button_Click(Object Sender, EventArgs e) 
+      {
+         Label1.Text = Server.HtmlEncode(Text1.Text);
+      }
+
+   </script>
+
+</head>
+
+<body>
+
+   <form id="Form1" runat="server">
+
+      <h3>Obter um cartão de fidelidade</h3>
+
+      <asp:lbl_cpf id="CPF" 
+                 Text="CPF" 
+                 runat="server"/>
+
+     <asp:lbl_nome id="Nome" 
+                 Text="Nome" 
+                 runat="server"/>
+        
+      <asp:lbl_telefone id="Telefone" 
+           Text="Telefone"
+           runat="server" />
+
+    <asp:lbl_email id="E-mail" 
+           Text="E-mail"
+           runat="server" />
+
+    <asp:lbl_data id="Data_de_nascimento" 
+           Text="Data de nascimento"
+           runat="server" />
+
+    <asp:lbl_endereco id="Endereço" 
+           Text="Endereço"
+           runat="server" />
+
+    <asp:lbl_numero id="Numero_do_cartao" 
+           Text="Número do cartão"
+           runat="server" /> 
+    
+      <asp:btn_cadastro id="Button" 
+           Text="Cadastre-se cliente" 
+           OnClick="Button_Click" 
+           runat="server"/>
+      
+
+   </form>
+
+</body>
+</html>
